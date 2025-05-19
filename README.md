@@ -28,4 +28,4 @@ Responsive Design: Media queries for adaptability across devices.
 
 Git & GitHub: Version control and project hosting.
 
-📸 Live Demo Experience the live version here: 
+📸 Live Demo Experience the live version here: https://qv-vq.github.io/web_project_around/
