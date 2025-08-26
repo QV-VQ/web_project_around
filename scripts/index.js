@@ -1,10 +1,10 @@
-import Card from "./scripts/Components/Card.js";
-import FormValidator from "./scripts/Components/FormValidator.js";
-import Section from "./scripts/Components/Section.js";
-import PopupWithImage from "./scripts/Components/PopupWithImage.js";
-import PopupWithForm from "./scripts/Components/PopupWithForm.js";
-import UserInfo from "./scripts/Components/UserInfo.js";
-import { initialCards, validationConfig, selectors } from "./data.js";
+import Card from "./Components/Card.js";
+import FormValidator from "./Components/FormValidator.js";
+import Section from "./Components/Section.js";
+import PopupWithImage from "./Components/PopupWithImage.js";
+import PopupWithForm from "./Components/PopupWithForm.js";
+import UserInfo from "./Components/UserInfo.js";
+import { initialCards, validationConfig, selectors } from "../data.js";
 
 // Initialize classes
 const userInfo = new UserInfo({
