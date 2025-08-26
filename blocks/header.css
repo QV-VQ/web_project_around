@@ -1,34 +1,23 @@
 .header {
-  padding-top: 40px;
+    border-bottom: 1px solid rgba(84, 84, 84, 0.7);
+    padding-bottom: 41px;
+    margin-bottom: 40px;
 }
 
-.header__logo-container {
-  max-width: 173px;
+.header__logo {
+    width: 173px;
+    height: 33px;
 }
 
-.header__divisor {
-  margin: 40px 0;
-}
-
-.header__nav {
-  margin-bottom: 50px;
-}
-
-@media screen and (max-width: 879px) {
-  .header {
-    padding: 24px 24px 0;
-  }
-
-  .header__divisor {
-    margin: 32px 0;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .header {
-    padding-top: 28px;
-  }
-  .header__nav {
-    padding: 0;
-  }
+@media screen and (max-width: 920px) {
+    .header {
+        padding-bottom: 32px;
+        margin-bottom: 42px;
+    }
+    
+    .header__logo {
+        width: 126px;
+        height: 24px;
+        margin-left: 27px;
+    }
 }

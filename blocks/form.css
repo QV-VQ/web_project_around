@@ -1,0 +1,83 @@
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form__field {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.form__input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 0 0 13px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.21;
+    box-sizing: border-box;
+}
+
+.form__input:focus {
+    outline: none;
+    border-bottom: 1px solid #000;
+}
+
+.form__input_type_error {
+    border-bottom: 1px solid #ff0000;
+}
+
+.form__error {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.25;
+    color: #ff0000;
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.form__error_visible {
+    opacity: 1;
+}
+
+.form__submit-button {
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 2px;
+    padding: 14px 0;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.22;
+    cursor: pointer;
+    transition: opacity 0.3s;
+    margin-top: 18px;
+}
+
+.form__submit-button:hover {
+    opacity: 0.8;
+}
+
+.form__submit-button:disabled {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+    opacity: 0.2;
+    cursor: default;
+}
+
+.form__submit-button:disabled:hover {
+    opacity: 0.2;
+}
+
+@media screen and (max-width: 620px) {
+    .form__submit-button {
+        font-size: 14px;
+        padding: 14px 0;
+    }
+}

@@ -1,23 +1,13 @@
 .button {
-  background-color: black;
-  color: white;
-  font-size: 18px;
-  cursor: pointer;
-  border: none;
-  transition: opacity 0.3s ease;
+    transition: opacity 0.3s;
+    cursor: pointer;
 }
 
 .button:hover {
-  opacity: 0.6;
+    opacity: 0.6;
 }
 
-.button:disabled {
-  background-color: rgba(0, 0, 0, 0.3);
-  cursor: not-allowed;
+.button__icon {
+    font-size: 22px;
+    color: #fff;
 }
-
-.button:disabled:hover {
-  opacity: 1;
-}
-
-/* Remove the duplicate rule that was at the bottom */
