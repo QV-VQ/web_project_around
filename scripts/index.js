@@ -2,27 +2,27 @@
 const initialCards = [
     {
         name: "Berlin",
-        link: "./images/berlin.webp"
+        link: "./images/berlin.jpg"
     },
     {
         name: "Stuttgart",
-        link: "./images/stuttgart.webp"
+        link: "./images/stuttgart.jpg"
     },
     {
         name: "Japan",
-        link: "./images/japan.webp"
+        link: "./images/japan.jpg"
     },
     {
         name: "Nagoyan",
-        link: "./images/nagoyan.webp"
+        link: "./images/nagoyan.jpg"
     },
     {
         name: "CDMX",
-        link: "./images/cdmx.webp"
+        link: "./images/cdmx.jpg"
     },
     {
         name: "Chichenitza",
-        link: "./images/chichenitza.webp"
+        link: "./images/chichenitza.jpg"
     }
 ];
 
