@@ -1,13 +1,3 @@
-// Configuration object for validation
-const validationConfig = {
-    formSelector: '.form',
-    inputSelector: '.form__input',
-    submitButtonSelector: '.form__submit-button',
-    inactiveButtonClass: 'form__submit-button_disabled',
-    inputErrorClass: 'form__input_type_error',
-    errorClass: 'form__error_visible'
-};
-
 // Function to show input error
 function showInputError(formElement, inputElement, errorMessage, config) {
     const errorElement = formElement.querySelector(`#${inputElement.id}-error`);
@@ -78,6 +68,3 @@ function enableValidation(config) {
         setEventListeners(formElement, config);
     });
 }
-
-// Enable validation when the script loads
-enableValidation(validationConfig);
