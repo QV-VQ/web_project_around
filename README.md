@@ -1,32 +1,28 @@
-Tripleten web_project_around
+# Around the World
 
-A responsive web application showcasing a traveler's journey through various destinations, allowing users to view, add, and manage photo cards representing different places.
+This project is an interactive web application that allows users to explore and share images of interesting places around the world.
 
-✨ Features Profile Editing: Update the user's name and profession via a popup form.
+## Features
 
-Add New Places: Introduce new destination cards with images and titles.
+- Display of cards with images of places
+- "Like" functionality for cards
+- Card deletion
+- Image viewing in expanded view
+- Form for adding new cards
+- Form validation
+- Responsive design
 
-Interactive Cards:
+## Technologies Used
 
-Like button toggles to indicate favorites.
+- HTML5
+- CSS3 (with BEM methodology)
+- JavaScript (ES6)
+- Normalize.css
 
-Delete button removes unwanted cards.
+## Project Structure
 
-Clicking on an image opens a larger view in a popup.
+The project follows the BEM methodology for CSS file organization:
 
-Form Validation: Ensures that all inputs meet specified criteria before submission.
-
-Responsive Design: Optimized for various screen sizes, from mobile to desktop.
-
-🛠️ Technologies Used HTML5 & CSS3: Structured markup and styling with Flexbox and Grid layouts.
-
-JavaScript (ES6): Dynamic DOM manipulation and event handling.
-
-BEM Methodology: Organized and maintainable CSS class naming convention.
-
-Responsive Design: Media queries for adaptability across devices.
-
-Git & GitHub: Version control and project hosting.
 
 📸 Live Demo Experience the live version here
 
