@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,22 +10,22 @@
 <body class="page">
     <div class="page__container">
         <header class="header">
-            <img src="./images/logo.svg" alt="Logo Around" class="header__logo">
+            <img src="./images/logo.svg" alt="Around Logo" class="header__logo">
         </header>
 
         <main class="content">
             <section class="profile">
                 <div class="profile__info">
                     <div class="profile__avatar-container">
-                        <img src="./images/avatar.jpg" alt="Avatar de Jac Explorador" class="profile__avatar">
-                        <button type="button" class="profile__avatar-edit" aria-label="Editar avatar"></button>
+                        <img src="./images/avatar.jpg" alt="Jac Explorer's Avatar" class="profile__avatar">
+                        <button type="button" class="profile__avatar-edit" aria-label="Edit avatar"></button>
                     </div>
                     <div class="profile__text">
-                        <h1 class="profile__name">Jac Explorador</h1>
-                        <p class="profile__description">Nuevo lugar</p>
+                        <h1 class="profile__name">Jac Explorer</h1>
+                        <p class="profile__description">New place</p>
                     </div>
                 </div>
-                <button type="button" class="button profile__add-button" aria-label="Añadir lugar">
+                <button type="button" class="button profile__add-button" aria-label="Add place">
                     <span class="button__icon">+</span>
                 </button>
             </section>
@@ -45,20 +45,20 @@
     <!-- Popup for editing profile -->
     <div class="popup popup_type_edit-profile">
         <div class="popup__container">
-            <button type="button" class="popup__close-button" aria-label="Cerrar ventana">
-                <img src="./images/close.svg" alt="Cerrar" class="popup__close-icon">
+            <button type="button" class="popup__close-button" aria-label="Close window">
+                <img src="./images/close.svg" alt="Close" class="popup__close-icon">
             </button>
-            <h2 class="popup__title">Editar perfil</h2>
+            <h2 class="popup__title">Edit profile</h2>
             <form class="form form_type_edit-profile" name="editProfileForm" novalidate>
                 <div class="form__field">
-                    <input type="text" id="name-input" name="name" class="form__input" placeholder="Nombre" required minlength="2" maxlength="40">
+                    <input type="text" id="name-input" name="name" class="form__input" placeholder="Name" required minlength="2" maxlength="40">
                     <span class="form__error" id="name-input-error"></span>
                 </div>
                 <div class="form__field">
-                    <input type="text" id="about-input" name="about" class="form__input" placeholder="Acerca de mí" required minlength="2" maxlength="200">
+                    <input type="text" id="about-input" name="about" class="form__input" placeholder="About me" required minlength="2" maxlength="200">
                     <span class="form__error" id="about-input-error"></span>
                 </div>
-                <button type="submit" class="button form__submit-button" disabled>Guardar</button>
+                <button type="submit" class="button form__submit-button" disabled>Save</button>
             </form>
         </div>
     </div>
@@ -66,20 +66,20 @@
     <!-- Popup for adding new card -->
     <div class="popup popup_type_add-card">
         <div class="popup__container">
-            <button type="button" class="popup__close-button" aria-label="Cerrar ventana">
-                <img src="./images/close.svg" alt="Cerrar" class="popup__close-icon">
+            <button type="button" class="popup__close-button" aria-label="Close window">
+                <img src="./images/close.svg" alt="Close" class="popup__close-icon">
             </button>
-            <h2 class="popup__title">Nuevo lugar</h2>
+            <h2 class="popup__title">New place</h2>
             <form class="form form_type_add-card" name="addCardForm" novalidate>
                 <div class="form__field">
-                    <input type="text" id="title-input" name="title" class="form__input" placeholder="Título" required minlength="2" maxlength="30">
+                    <input type="text" id="title-input" name="title" class="form__input" placeholder="Title" required minlength="2" maxlength="30">
                     <span class="form__error" id="title-input-error"></span>
                 </div>
                 <div class="form__field">
-                    <input type="url" id="link-input" name="link" class="form__input" placeholder="Enlace a la imagen" required>
+                    <input type="url" id="link-input" name="link" class="form__input" placeholder="Image link" required>
                     <span class="form__error" id="link-input-error"></span>
                 </div>
-                <button type="submit" class="button form__submit-button" disabled>Crear</button>
+                <button type="submit" class="button form__submit-button" disabled>Create</button>
             </form>
         </div>
     </div>
@@ -87,8 +87,8 @@
     <!-- Popup for image preview -->
     <div class="popup popup_type_image">
         <div class="popup__container popup__container_type_image">
-            <button type="button" class="popup__close-button" aria-label="Cerrar ventana">
-                <img src="./images/close.svg" alt="Cerrar" class="popup__close-icon">
+            <button type="button" class="popup__close-button" aria-label="Close window">
+                <img src="./images/close.svg" alt="Close" class="popup__close-icon">
             </button>
             <img src="" alt="" class="popup__image">
             <p class="popup__caption"></p>
@@ -99,14 +99,14 @@
     <template id="card-template">
         <li class="card">
             <img src="" alt="" class="card__image">
-            <button type="button" class="card__delete-button" aria-label="Eliminar lugar">
-                <img src="./images/delete.svg" alt="Eliminar" class="card__delete-icon">
+            <button type="button" class="card__delete-button" aria-label="Delete place">
+                <img src="./images/delete.svg" alt="Delete" class="card__delete-icon">
             </button>
             <div class="card__info">
                 <h2 class="card__title"></h2>
                 <div class="card__like-container">
-                    <button type="button" class="card__like-button" aria-label="Me gusta">
-                        <img src="./images/heart.svg" alt="Me gusta" class="card__like-icon">
+                    <button type="button" class="card__like-button" aria-label="Like">
+                        <img src="./images/heart.svg" alt="Like" class="card__like-icon">
                     </button>
                     <span class="card__like-count">0</span>
                 </div>

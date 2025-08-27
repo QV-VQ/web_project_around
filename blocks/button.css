@@ -10,15 +10,4 @@
 .button__icon {
     font-size: 22px;
     color: #fff;
-
-.form__submit-button_disabled {
-    background-color: #fff;
-    color: #000;
-    border: 1px solid #000;
-    opacity: 0.2;
-    cursor: default;
-}
-
-.form__submit-button_disabled:hover {
-    opacity: 0.2;
 }
