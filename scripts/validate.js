@@ -1,17 +1,21 @@
 // Function to show input error
 function showInputError(formElement, inputElement, errorMessage, config) {
     const errorElement = formElement.querySelector(`#${inputElement.id}-error`);
-    inputElement.classList.add(config.inputErrorClass);
-    errorElement.textContent = errorMessage;
-    errorElement.classList.add(config.errorClass);
+    if (errorElement) {
+        inputElement.classList.add(config.inputErrorClass);
+        errorElement.textContent = errorMessage;
+        errorElement.classList.add(config.errorClass);
+    }
 }
 
 // Function to hide input error
 function hideInputError(formElement, inputElement, config) {
     const errorElement = formElement.querySelector(`#${inputElement.id}-error`);
-    inputElement.classList.remove(config.inputErrorClass);
-    errorElement.textContent = '';
-    errorElement.classList.remove(config.errorClass);
+    if (errorElement) {
+        inputElement.classList.remove(config.inputErrorClass);
+        errorElement.textContent = '';
+        errorElement.classList.remove(config.errorClass);
+    }
 }
 
 // Function to check input validity
@@ -46,6 +50,7 @@ function setEventListeners(formElement, config) {
     const inputList = Array.from(formElement.querySelectorAll(config.inputSelector));
     const buttonElement = formElement.querySelector(config.submitButtonSelector);
     
+    // Set initial button state
     toggleButtonState(inputList, buttonElement, config);
     
     inputList.forEach(inputElement => {

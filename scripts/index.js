@@ -70,7 +70,8 @@ function handleOverlayClick(evt) {
 }
 
 function handleCardLike(evt) {
-    evt.target.classList.toggle('card__like-icon_active');
+    const likeIcon = evt.currentTarget.querySelector('.card__like-icon');
+    likeIcon.classList.toggle('card__like-icon_active');
 }
 
 function handleCardDelete(evt) {

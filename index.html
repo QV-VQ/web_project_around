@@ -51,12 +51,12 @@
             <h2 class="popup__title">Editar perfil</h2>
             <form class="form form_type_edit-profile" name="editProfileForm" novalidate>
                 <div class="form__field">
-                    <input type="text" name="name" class="form__input" placeholder="Nombre" required minlength="2" maxlength="40">
-                    <span class="form__error" id="name-error"></span>
+                    <input type="text" id="name-input" name="name" class="form__input" placeholder="Nombre" required minlength="2" maxlength="40">
+                    <span class="form__error" id="name-input-error"></span>
                 </div>
                 <div class="form__field">
-                    <input type="text" name="about" class="form__input" placeholder="Acerca de mí" required minlength="2" maxlength="200">
-                    <span class="form__error" id="about-error"></span>
+                    <input type="text" id="about-input" name="about" class="form__input" placeholder="Acerca de mí" required minlength="2" maxlength="200">
+                    <span class="form__error" id="about-input-error"></span>
                 </div>
                 <button type="submit" class="button form__submit-button" disabled>Guardar</button>
             </form>
@@ -72,12 +72,12 @@
             <h2 class="popup__title">Nuevo lugar</h2>
             <form class="form form_type_add-card" name="addCardForm" novalidate>
                 <div class="form__field">
-                    <input type="text" name="title" class="form__input" placeholder="Título" required minlength="2" maxlength="30">
-                    <span class="form__error" id="title-error"></span>
+                    <input type="text" id="title-input" name="title" class="form__input" placeholder="Título" required minlength="2" maxlength="30">
+                    <span class="form__error" id="title-input-error"></span>
                 </div>
                 <div class="form__field">
-                    <input type="url" name="link" class="form__input" placeholder="Enlace a la imagen" required>
-                    <span class="form__error" id="link-error"></span>
+                    <input type="url" id="link-input" name="link" class="form__input" placeholder="Enlace a la imagen" required>
+                    <span class="form__error" id="link-input-error"></span>
                 </div>
                 <button type="submit" class="button form__submit-button" disabled>Crear</button>
             </form>
