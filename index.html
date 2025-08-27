@@ -1,120 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Around</title>
-    <link rel="stylesheet" href="./vendor/normalize.css">
-    <link rel="stylesheet" href="./pages/index.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- CSP headers -->
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+
+  <!-- Primary Meta Tags -->
+  <title>Around the World</title>
+  <meta name="author" content="ODCenteno" />
+  <meta name="description" content="A solo trip around Asia, Oceania, and Europe." />
+  <meta name="title" content="Around the World" />
+  <meta name="keywords" content="html, css, javascript, blog, traveling" />
+
+  <link rel="icon" type="image/svg+xml" href="./images/favicon.svg">
+  <meta name="theme-color" content="#000" />
+
+  <!-- Synchronous CSS -->
+  <link rel="stylesheet" href="./pages/index.css">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Around the World">
+  <meta property="og:description" content="A solo trip around Asia, Oceania, and Europe.">
+  <meta property="og:image" content="/some-image.png">
+  <meta property="og:url" content="/this-page.html">
+  <meta property="og:site_name" content="Around the World">
 </head>
-<body class="page">
-    <div class="page__container">
-        <header class="header">
-            <img src="./images/logo.svg" alt="Around Logo" class="header__logo">
-        </header>
 
-        <main class="content">
-            <section class="profile">
-                <div class="profile__info">
-                    <div class="profile__avatar-container">
-                        <img src="./images/avatar.jpg" alt="Jac Explorer's Avatar" class="profile__avatar">
-                        <button type="button" class="profile__avatar-edit" aria-label="Edit avatar"></button>
-                    </div>
-                    <div class="profile__text">
-                        <h1 class="profile__name">Jac Explorer</h1>
-                        <p class="profile__description">New place</p>
-                    </div>
-                </div>
-                <button type="button" class="button profile__add-button" aria-label="Add place">
-                    <span class="button__icon">+</span>
-                </button>
-            </section>
-
-            <section class="elements">
-                <ul class="elements__list">
-                    <!-- Cards will be inserted here by JavaScript -->
-                </ul>
-            </section>
-        </main>
-
-        <footer class="footer">
-            <p class="footer__copyright">© 2023 Around</p>
-        </footer>
-    </div>
-
-    <!-- Popup for editing profile -->
-    <div class="popup popup_type_edit-profile">
-        <div class="popup__container">
-            <button type="button" class="popup__close-button" aria-label="Close window">
-                <img src="./images/close.svg" alt="Close" class="popup__close-icon">
-            </button>
-            <h2 class="popup__title">Edit profile</h2>
-            <form class="form form_type_edit-profile" name="editProfileForm" novalidate>
-                <div class="form__field">
-                    <input type="text" id="name-input" name="name" class="form__input" placeholder="Name" required minlength="2" maxlength="40">
-                    <span class="form__error" id="name-input-error"></span>
-                </div>
-                <div class="form__field">
-                    <input type="text" id="about-input" name="about" class="form__input" placeholder="About me" required minlength="2" maxlength="200">
-                    <span class="form__error" id="about-input-error"></span>
-                </div>
-                <button type="submit" class="button form__submit-button" disabled>Save</button>
-            </form>
+<body>
+  <div class="page">
+    <header class="header page__header">
+      <div class="header__logo-container">
+        <img src="./images/logo.svg" alt="Around logo" class="header__logo">
+      </div>
+      <hr class="header__divisor">
+      <nav class="nav header__nav">
+        <div class="nav__avatar-container nav__avatar-position">
+          <img src="./images/avatar.jpg" alt="Profile Avatar" class="nav__avatar">
         </div>
-    </div>
-
-    <!-- Popup for adding new card -->
-    <div class="popup popup_type_add-card">
-        <div class="popup__container">
-            <button type="button" class="popup__close-button" aria-label="Close window">
-                <img src="./images/close.svg" alt="Close" class="popup__close-icon">
-            </button>
-            <h2 class="popup__title">New place</h2>
-            <form class="form form_type_add-card" name="addCardForm" novalidate>
-                <div class="form__field">
-                    <input type="text" id="title-input" name="title" class="form__input" placeholder="Title" required minlength="2" maxlength="30">
-                    <span class="form__error" id="title-input-error"></span>
-                </div>
-                <div class="form__field">
-                    <input type="url" id="link-input" name="link" class="form__input" placeholder="Image link" required>
-                    <span class="form__error" id="link-input-error"></span>
-                </div>
-                <button type="submit" class="button form__submit-button" disabled>Create</button>
-            </form>
+        <div class="nav__container">
+          <div class="nav__name-edit">
+            <h1 class="nav__name">Jac Explorer</h1>
+            <button class="button nav__button-edit" id="edit-profile-btn"
+              title="Click to modify profile information"></button>
+          </div>
+          <p class="nav__job-title">Intergalactic Traveler</p>
         </div>
-    </div>
+        <button type="button" class="button nav__button-add" title="Click to add a new place"></button>
+      </nav>
+    </header>
 
-    <!-- Popup for image preview -->
-    <div class="popup popup_type_image">
-        <div class="popup__container popup__container_type_image">
-            <button type="button" class="popup__close-button" aria-label="Close window">
-                <img src="./images/close.svg" alt="Close" class="popup__close-icon">
-            </button>
-            <img src="" alt="" class="popup__image">
-            <p class="popup__caption"></p>
-        </div>
-    </div>
-
-    <!-- Template for card element -->
-    <template id="card-template">
-        <li class="card">
-            <img src="" alt="" class="card__image">
-            <button type="button" class="card__delete-button" aria-label="Delete place">
-                <img src="./images/delete.svg" alt="Delete" class="card__delete-icon">
-            </button>
-            <div class="card__info">
-                <h2 class="card__title"></h2>
-                <div class="card__like-container">
-                    <button type="button" class="card__like-button" aria-label="Like">
-                        <img src="./images/heart.svg" alt="Like" class="card__like-icon">
-                    </button>
-                    <span class="card__like-count">0</span>
-                </div>
+    <main class="main">
+      <section id="articles" class="articles">
+        <!-- Cards will be inserted here by JavaScript -->
+      </section>
+      <aside id="edit-profile-popup" class="popup popup_hidden">
+        <form id="form-profile" class="popup__form" name="edit-form" action="/" method="post" novalidate>
+          <button type="reset" class="button popup__button-close" id="popup-button-close"></button>
+          <h2 class="popup__title">Edit Profile</h2>
+          <fieldset class="popup__fields">
+            <input type="text" class="popup__input" id="popup-input-name" name="edit-name" placeholder="Name"
+              minlength="2" maxlength="40" required>
+            <span id="popup-input-name-error" class="popup__span-error"></span>
+            <input type="text" class="popup__input" id="popup-input-description" name="edit-description" minlength="2"
+              maxlength="200" placeholder="About me" required>
+            <span id="popup-input-description-error" class="popup__span-error"></span>
+          </fieldset>
+          <button type="submit" class="button popup__button-submit" id="popup-button-profile-submit"
+            disabled>Save</button>
+        </form>
+      </aside>
+      <aside id="add-place-popup" class="popup popup_hidden">
+        <form id="form-place" class="popup__form" name="edit-form" action="/" method="post" novalidate>
+          <button type="reset" class="button popup__button-close" id="popup-add-place-close"></button>
+          <h2 class="popup__title">New Place</h2>
+          <fieldset class="popup__fields">
+            <input type="text" class="popup__input" id="popup-input-title" name="edit-name" placeholder="Title"
+              minlength="2" maxlength="30" required>
+            <span id="popup-input-title-error" class="popup__span-error"></span>
+            <input type="text" class="popup__input" id="form-img-src" name="edit-description" pattern="https://.*"
+              placeholder="Image link" required>
+            <span id="form-img-src-error" class="popup__span-error"></span>
+          </fieldset>
+          <button type="submit" class="button popup__button-submit" id="popup-button-place-submit"
+            disabled>Create</button>
+        </form>
+      </aside>
+      <aside id="popup__img-zoom" class="popup popup_hidden">
+        <figure class="popup__zoom-container">
+          <button type="reset" class="button popup__button-close" id="popup-image-close"></button>
+          <img class="popup__image" id="zoom-img" src="" alt="" title="">
+          <figcaption class="popup__figcaption"></figcaption>
+        </figure>
+      </aside>
+      <template id="card-template">
+        <article class="card articles__card">
+          <img class="card__delete-icon" src="./images/delete.svg" alt="delete icon" id="delete">
+          <picture class="card__picture">
+            <img class="card__image" src="./images/berlin.jpg" alt="Berlin landscape" data-orientation="horizontal">
+          </picture>
+          <div class="card__place-info">
+            <h3 class="card__place-title">Berlin</h3>
+            <div class="card__icon-container">
+              <img class="card__like-icon" src="./images/heart.svg" alt="like icon" data-is-liked="false">
             </div>
-        </li>
-    </template>
-
-    <script src="./scripts/validate.js"></script>
-    <script src="./scripts/index.js"></script>
+          </div>
+        </article>
+      </template>
+    </main>
+    <footer class="footer">
+      <p class="footer__copy">&copy; 2025 Around The World by <a href="#"
+          target="_blank">FDSC!</a></p>
+    </footer>
+  </div>
+  <script src="./scripts/validate.js"></script>
+  <script src="./scripts/index.js"></script>
 </body>
 </html>
